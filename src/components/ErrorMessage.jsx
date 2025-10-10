@@ -1,9 +1,9 @@
 const ErrorMessage = ({ message }) => {
   return (
-    <div className="max-w-2xl mx-auto mt-8 p-4 bg-red-50 border border-red-200 rounded-lg">
+    <div className="max-w-2xl mx-auto mt-8 p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg">
       <div className="flex items-center">
         <svg
-          className="w-5 h-5 text-red-500 mr-2"
+          className="w-5 h-5 text-red-500 dark:text-red-400 mr-2"
           fill="currentColor"
           viewBox="0 0 20 20"
         >
@@ -13,7 +13,7 @@ const ErrorMessage = ({ message }) => {
             clipRule="evenodd"
           />
         </svg>
-        <p className="text-red-700">{message}</p>
+        <p className="text-red-700 dark:text-red-300">{message}</p>
       </div>
     </div>
   );
