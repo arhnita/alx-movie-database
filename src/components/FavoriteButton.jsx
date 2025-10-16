@@ -21,6 +21,9 @@ const FavoriteButton = ({ movie }) => {
       localStorage.setItem('favorites', JSON.stringify(favorites));
       setIsFavorite(true);
     }
+
+    // Dispatch custom event to notify other components
+    window.dispatchEvent(new CustomEvent('favoritesChanged'));
   };
 
   return (

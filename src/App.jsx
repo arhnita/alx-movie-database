@@ -41,9 +41,15 @@ function App() {
 
     loadFavorites();
 
-    // Listen for storage changes
+    // Listen for storage changes (from other tabs)
     window.addEventListener('storage', loadFavorites);
-    return () => window.removeEventListener('storage', loadFavorites);
+    // Listen for custom event (from same tab)
+    window.addEventListener('favoritesChanged', loadFavorites);
+
+    return () => {
+      window.removeEventListener('storage', loadFavorites);
+      window.removeEventListener('favoritesChanged', loadFavorites);
+    };
   }, []);
 
   // Apply filters and sorting
@@ -90,7 +96,14 @@ function App() {
 
     try {
       const data = await searchMovies(query);
-      setMovies(data.Search || []);
+      const searchResults = data.Search || [];
+
+      // Filter out duplicate movies by imdbID
+      const uniqueMovies = searchResults.filter((movie, index, self) =>
+        index === self.findIndex((m) => m.imdbID === movie.imdbID)
+      );
+
+      setMovies(uniqueMovies);
       setTotalResults(parseInt(data.totalResults) || 0);
     } catch (err) {
       setError(err.message || 'Failed to fetch movies. Please try again.');
