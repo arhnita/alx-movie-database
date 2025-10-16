@@ -42,7 +42,7 @@ A modern, feature-rich movie database application built with React, Vite, and Ta
 
 - Node.js (v14 or higher)
 - npm or yarn
-- OMDB API key (get one at [http://www.omdbapi.com/apikey.aspx](http://www.omdbapi.com/apikey.aspx))
+- OMDB API key (i got mine at [http://www.omdbapi.com/apikey.aspx](http://www.omdbapi.com/apikey.aspx))
 
 ### Installation
 
@@ -159,22 +159,10 @@ This project uses the [OMDB API](http://www.omdbapi.com/):
 
 ## Deployment
 
-### Netlify
+I deployed the application on vercel and here is the url below 
+https://alx-movie-database.vercel.app/
 
-1. Push your code to GitHub
-2. Connect your repository to Netlify
-3. Set the build command: `npm run build`
-4. Set the publish directory: `dist`
-5. Add environment variable: `VITE_OMDB_API_KEY=your_api_key`
-6. Deploy!
 
-### Vercel
-
-1. Install Vercel CLI: `npm i -g vercel`
-2. Run `vercel` in the project directory
-3. Follow the prompts
-4. Add environment variable in Vercel dashboard: `VITE_OMDB_API_KEY`
-5. Redeploy with `vercel --prod`
 
 ## Features Implemented
 
@@ -226,19 +214,6 @@ This project uses the [OMDB API](http://www.omdbapi.com/):
 2. Check the OMDB API status
 3. Verify you haven't exceeded API rate limits
 
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## License
-
-This project is licensed under the MIT License.
 
 ## Acknowledgments
 
@@ -249,8 +224,8 @@ This project is licensed under the MIT License.
 
 ## Author
 
+Anita Samuel
 ALX Frontend Development Capstone Project
 
----
 
 **Happy movie browsing! 🎬🍿**
